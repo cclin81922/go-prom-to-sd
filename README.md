@@ -6,7 +6,7 @@ cd go-prom-to-sd
 
 bash BuildingwithCloudNativeBuildpacks.sh
 
-yq w -i daemonset.yaml "spec.containers[0].image" "gcr.io/$(gcloud config get-value project)/prom-to-sd"
+yq w -i daemonset.yaml "spec.containers[0].image" "gcr.io/$(gcloud config get-value project)/df-reporter"
 kubectl apply -f daemonset.yaml
 ```
 
